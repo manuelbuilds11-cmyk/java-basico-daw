@@ -1,0 +1,323 @@
+﻿-Ejercicio 1
+
+void main() {
+//Declaramos las dos variables de tipo entero
+// Definimos el valor de las dos variables
+//Calculos ya con las variables definidas
+int valor1 = 256;
+int valor2 = 398;
+IO.println("La suma es " +("valor1 + valor2 ") + " el resultado es " + (valor1+ valor2));
+IO.println("La diferencia es " +("valor1 - valor2 ") + " el resultado es " + (valor1-valor2));
+IO.println("El producto es " +("valor1 *  valor2 ") + " el resultado es "+ (valor1*valor2));
+IO.println("El cociente es " +("valor1 / valor2 ") + " el resultado es "+ (valor1/valor2));
+IO.println("El modulo es " +("valor1 % valor2 ") + " el resultado es "+ (valor1%valor2));
+
+-Ejercicio 2
+
+void main() {
+//Ejercicio 2
+	double euros=Double.parseDouble(IO.readln("Dame un valor en euros: "));
+	double pesetas = 166.386;
+IO.println("El valor en pesetas es: "+(euros*pesetas));
+
+-Ejercicio 3
+void main() {
+//Ejercicio 3
+double base = Double.parseDouble(IO.readln("Dame la base: "));
+double IVA = (base*0.21);
+double totalFactura = (base+IVA);
+IO.println("La factura total es "+(totalFactura));
+
+-Ejercicio 4
+void main() {
+//Ejercicio 4
+int numero= 13;
+ boolean esPar = (numero %2 ==0);
+boolean impar = (numero %2 !=0);
+
+IO.println( esPar);
+
+-Ejercicio 5
+void main() {
+int Numero1 = Integer.parseInt(IO.readln("Dame un numero: "));
+int Numero2 = Integer.parseInt(IO.readln("Dame otro numero: "));
+IO.println("La suma es Numero1 + Numero 2"+ " y el resultado es:"+ (Numero1+Numero2));
+IO.println("La diferencia es Numero1 - Numero 2"+ " y el resultado es:"+ (Numero1-Numero2));
+IO.println("El producto es Numero1 * Numero 2"+ " y el resultado es:"+ (Numero1*Numero2));
+IO.println("La división es Numero1 / Numero 2"+ " y el resultado es:"+ (Numero1/Numero2));
+IO.println("El módulo es Numero1 % Numero 2"+ " y el resultado es:"+ (Numero1%Numero2));
+
+-Ejercicio 6
+void main() {
+    double pesetas = Double.parseDouble(IO.readln("Dime la cantidad de pesetas: "));
+    double euros = (pesetas / 166.386);
+    IO.readln("La cantidad convertida a euros es: " + (euros) + "€");
+}
+
+-Ejercicio 7
+void main() {
+    double euros = Double.parseDouble(IO.readln("Dime la cantidad de euros: ")); 
+    double pesetas = (euros * 166.386);
+    IO.readln("La cantidad convertida a pesetas es: " + (pesetas));
+}
+
+-Ejercicio 8
+
+void main() {
+    double base = Double.parseDouble(IO.readln("Dame el valor de la base: "));
+    double altura = Double.parseDouble(IO.readln("Dame el valor de la altura: "));
+    double area = base * altura; 
+    IO.readln("El área del rectángulo es de: " + area);
+}
+
+-Ejercicio 9
+
+void main() {
+    double base = Double.parseDouble(IO.readln("Dame el valor de la base: "));
+    double altura = Double.parseDouble(IO.readln("Dame el valor de la altura: "));
+    double area = ((base * altura) / 2); 
+    IO.readln("El area del triángulo es de :" + area);
+}
+
+-Ejercicion 10
+
+void main() {
+    double base = Double.parseDouble(IO.readln("Dime el valor de la base: "));
+    double IVA = Double.parseDouble(IO.readln("Dime el valor de el IVA: "));
+    double facturaTotal = base * IVA; 
+    IO.println("El valor de la factura total es de: " + facturaTotal + "€");
+}
+
+-Ejercicio 11
+
+void main() {
+    int horas = Integer.parseInt(IO.readln("Dime el numero de horas semanales: "));
+    double salarioSemanal = (horas * 12);
+    IO.println("El salario semanal es de: " + (salarioSemanal));
+}
+
+-Ejercicio 12
+
+void main() {
+    double radio = Double.parseDouble(IO.readln("Dime el radio del cono: "));
+    double altura = Double.parseDouble(IO.readln("Dime la altura del cono: "));
+    double volumenCono = (1.0 / 3.0) * 3.14 * radio * radio * altura;
+    IO.println("El volumen del cono es de: " + volumenCono);
+}
+
+-Ejercicio 13
+
+void main() {
+    int MB = 8;
+    int KB = MB * 1024;
+    IO.println(KB); 
+}
+
+-Ejercicio 14
+
+void main() {
+    double primerExamen = 8.0;
+    double mediaDeseada = 9.0;
+    double segundoExamen = (mediaDeseada * 2) - primerExamen;
+    IO.println("Nota necesaria en el segundo examen: " + segundoExamen);
+}
+
+-Ejercicio 15
+
+void main() {
+    double salarioBase = 1200.0;
+    double comision = 0.1;
+    double importeVenta1 = 50.0;
+    double importeVenta2 = 100.0;
+    double importeVenta3 = 250.0;
+    double gananciaTotal = salarioBase + (comision * (importeVenta1 + importeVenta2 + importeVenta3));
+    IO.println(gananciaTotal);
+}
+
+-Ejercicio 16
+
+void main() {
+    double inversion1 = Double.parseDouble(IO.readln("Introduce la inversión de la persona 1: "));
+    double inversion2 = Double.parseDouble(IO.readln("Introduce la inversión de la persona 2: "));
+    double inversion3 = Double.parseDouble(IO.readln("Introduce la inversión de la persona 3: "));
+    
+    double total = inversion1 + inversion2 + inversion3;
+    
+    double porcentaje1 = (inversion1 / total) * 100;
+    double porcentaje2 = (inversion2 / total) * 100;
+    double porcentaje3 = (inversion3 / total) * 100;
+    
+    IO.println("La primera persona invierte un " + porcentaje1 + "%");
+    IO.println("La segunda persona invierte un " + porcentaje2 + "%");
+    IO.println("La tercera persona invierte un " + porcentaje3 + "%");
+}
+
+-Ejercicio 17
+
+void main() {
+    double presupuestoTotal = Double.parseDouble(IO.readln("Dime el presupuesto del hospital: "));
+    double departamentoGinecologia = presupuestoTotal * 0.4;
+    double departamentoTraumatologia = presupuestoTotal * 0.35;
+    double departamentoPediatria = presupuestoTotal * 0.25;
+
+    IO.println("El presupuesto de Ginecologia es: " + departamentoGinecologia + "€");
+    IO.println("El presupuesto de Traumatologia es: " + departamentoTraumatologia + "€");
+    IO.println("El presupuesto de Pediatria es: " + departamentoPediatria + "€");
+}
+
+-Ejercicio 18
+
+void main() {
+    double notaUnidad1 = 7.0;
+    double notaUnidad2 = 6.0;
+    double notaUnidad3 = 8.5;
+    double promedio = ((notaUnidad1 + notaUnidad2 + notaUnidad3) / 3) * 0.55;
+    double examenFinal = 7.0 * 0.30;
+    double trabajoClase = 6.5 * 0.15;
+    double notaFinal = promedio + examenFinal + trabajoClase;
+    
+    IO.println("La nota final es: " + notaFinal);
+}
+
+-Ejercicio 19
+
+void main() {
+    double radioCircunferencia = Double.parseDouble(IO.readln("Dime el radio de la circunferencia: "));
+    double longitudDeCircunferencia = 2 * 3.14 * radioCircunferencia;
+    double areaDelCirculo = 3.14 * (radioCircunferencia * radioCircunferencia);
+    
+    IO.println("La longitud de la circunferencia es de: " + longitudDeCircunferencia);
+    IO.println("El área del circulo es de: " + areaDelCirculo);
+}
+
+-Ejercicio 20
+
+void main() {
+    double base = Double.parseDouble(IO.readln("Dime el valor de la base: "));
+    double ladoIzquierdo = Double.parseDouble(IO.readln("Dime el valor del lado izquierdo: "));
+    double ladoDerecho = Double.parseDouble(IO.readln("Dime el valor del lado derecho : "));
+    double areaRectangulo = base * ladoDerecho;
+    double areaTriangulo = (base * (ladoIzquierdo - ladoDerecho)) / 2;
+    double areaTotal = areaRectangulo + areaTriangulo;
+    
+    IO.print("El area total de esta figura mide: " + areaTotal);
+}
+
+-Ejercicio 21
+
+void main() {
+    double produccionEnLitros = Double.parseDouble(IO.readln("Dime cuantos litros de leche has producido hoy: "));
+    double reciboGalones = produccionEnLitros / 3.785;
+    
+    IO.println("Recibiras un total de: " + reciboGalones + " galones");
+}
+
+-Ejercicio 22
+
+void main() {
+    double largo = Double.parseDouble(IO.readln("Dime el largo de la piscina: "));
+    double ancho = Double.parseDouble(IO.readln("Dime el ancho de la piscina: "));
+    double profundidad = Double.parseDouble(IO.readln("Dime la profundidad de la piscina: "));
+    double precioLitros = Double.parseDouble(IO.readln("Dime a cuanto esta el precio por litro: "));
+    
+    double conversorLitros = (largo * ancho * profundidad) * 1000;
+    double costeFinal = conversorLitros * precioLitros;
+    
+    IO.println("El coste final de la piscina es de: " + costeFinal + " €");
+}
+
+-Ejercicio 23
+
+void main() {
+    // Solicita por teclado el voltaje al usuario y lo convierte a número decimal (double)
+    double voltaje = Double.parseDouble(IO.readln("Dime cual es la cantidad del voltaje: "));
+    
+    // Define el valor fijo de la resistencia del circuito obtenido del esquema (4 ohmios)
+    int resistencia = 4;
+    
+    // Calcula la intensidad dividiendo el voltaje entre la resistencia (Ley de Ohm: I = V / R)
+    double intensidad = (voltaje / resistencia);
+    
+    // Calcula la potencia multiplicando el voltaje por la intensidad (P = V * I)
+    double potencia = (voltaje * intensidad);
+    
+    // Muestra por pantalla el resultado final de la potencia en vatios (W)
+    IO.println("Finalmente la potencia vale un total de: " + (potencia) + "W");
+}
+
+-Ejercicio 24
+
+void main() {
+    // Pide al usuario la duración de la llamada en minutos y la convierte a número decimal (double)
+    double duracionMinutos = (Double.parseDouble(IO.readln("Dime la duración de la llamada en minutos: ")));
+    
+    // Define el coste fijo de establecimiento de llamada
+    double costeEstablecimiento = (0.20);
+    
+    // Define el coste por cada minuto de llamada
+    double costeMinuto = (0.15);
+    
+    // Calcula el coste total multiplicando los minutos por el coste por minuto y sumándole el establecimiento
+    double costeTotal = ((duracionMinutos * costeMinuto) + costeEstablecimiento);
+    
+    // Muestra por pantalla el coste total de la llamada con su símbolo de euro
+    IO.println("El coste total de esta llamada es de: " + costeTotal + " €");
+}
+
+-Ejercicio 25
+
+void main() {
+    // Solicita un número entero por teclado al usuario y lo convierte de texto a número entero
+    int numeroEntero = Integer.parseInt(IO.readln("Dime un número entero: "));
+    
+    // Comprueba si el número es divisible entre 2 (resto 0); guarda true si es par o false si es impar
+    boolean par = (numeroEntero % 2 == 0);
+    
+    // Muestra por pantalla el valor booleano resultante (true si es par, false en caso contrario)
+    IO.println(par);
+}
+
+-Ejercicio 26
+
+void main() {
+double primeraEvaluacion = Double.parseDouble(IO.readln(" Dime la calificación de la primera evaluación:  "));
+double segundaEvaluacion = Double.parseDouble(IO.readln(" Dime la calificación de la segunda evaluación:  "));
+double terceraEvaluacion = Double.parseDouble(IO.readln(" Dime la calificación de la tercera evaluación:  "));
+double notaFinal = (primeraEvaluacion + segundaEvaluacion + terceraEvaluacion)/3;
+boolean aprobado = (notaFinal>=5);
+IO.print(aprobado);
+}
+
+-Ejercicio 27
+
+void main() {
+int edad = Integer.parseInt(IO.readln("Dime cual es tu edad: "));
+boolean permiso =(edad>=18);
+IO.println(permiso);
+}
+
+-Ejercicio 28
+
+void main() {
+int primeraPersona = Integer.parseInt(IO.readln("Dime cual es tu edad: "));
+int segundaPersona = Integer.parseInt(IO.readln("Dime cual es tu edad: "));
+int terceraPersona = Integer.parseInt(IO.readln("Dime cual es tu edad: "));
+boolean mayor =(primeraPersona>segundaPersona&&segundaPersona>terceraPersona);
+IO.println(mayor);
+}
+
+-Ejercicio 29
+
+void main() {
+double real = Double.parseDouble(IO.readln("Dime un numero real: "));
+boolean incluido = (real>=20 && real<30);
+IO.println(incluido);
+}
+
+-Ejercicio 30
+
+void main() {
+int digitos = (Integer.parseInt(IO.readln(" Dime un numero: ")));
+boolean incluido = (digitos<9|| digitos>=100)&&(digitos>=-9 || digitos<=-100);
+IO.println(incluido);
+}
