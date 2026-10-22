@@ -91,7 +91,115 @@ IO.println("La cuenta sería finalmente de : "+ (cuentaFinal)+ " €");
       + (" metros cúbicos") + (" y el volumen del cilindro sin decimales es un total de: ") + (volCilindro)
       + (" metros cúbicos"));
 
+
+
+      final double PRECIO_PIZZA = 9.5;
+  final double IVA = 0.21;
+  IO.println("FACTURA PIZZERÍA. MANUEL GUTIÉRREZ NAVARRO");
+  int numeroPizzas = Integer.parseInt(IO.readln("Dime cual es el número de pizzas que vas a pedir: "));
+  double porcentajeDescuento = Double.parseDouble(IO.readln("Dime cual es tu porcentaje de descuento: "));
+
+  double baseImponible = (numeroPizzas * PRECIO_PIZZA) - (numeroPizzas * PRECIO_PIZZA * porcentajeDescuento);
+  double importeIVA = (baseImponible * IVA);
+  double total = (baseImponible) + (baseImponible * IVA);
+  int euros = (int) total ;
+  double céntimos = (int) ((total-euros)*100);
+  IO.println("La base imponible del pedido de pizzas es un total de: " + baseImponible
+      + (" .El importe de IVA es de un:  " + importeIVA + (" finalmente el total es de: " + total+ " este siendo repartido en: ")+(euros)+ " €")+ " y  siendo un total de: "+(céntimos)+ " centimos ");
+
+final double RETENCION_IMPUESTOS = 0.15;
+  double numeroHoras = Double.parseDouble(IO.readln("Dime el número de horas trabajadas en el mes: "));
+double precioHora  = Double.parseDouble(IO.readln("Dime el precio por hora trabajada: "));
+double salarioBruto = (numeroHoras*precioHora);
+double retencionImpuestos=(salarioBruto*RETENCION_IMPUESTOS);
+double salarioNetoFinal = (salarioBruto)-(salarioBruto*RETENCION_IMPUESTOS);
+IO.println("Finalmente el salario bruto es de: "+(salarioBruto)+" €");
+IO.println("La retención de impuestos es de: "+(retencionImpuestos)+"€");
+IO.println("El slario neto final es de: "+(salarioNetoFinal)+"€");
+
+
+
+double precioBase = Double.parseDouble(IO.readln("Dime cual es el precio base del producto: "));
+ final double tipoIva = Double.parseDouble(IO.readln("Dime cual es el tipo de IVA aplicable: "));
+double importeIVA = (precioBase*tipoIva);
+double precioFinal = (precioBase)+ (importeIVA);
+
+IO.println(" El importe del IVA es de un: "+ importeIVA + " €"+ "y el precio final alcanza un total de; " + precioFinal);
+
+
+
+IO.println("Tarifa Plana Joven.MANUEL GUTIÉRREZ NAVARRO");
+  double edad = Double.parseDouble(IO.readln("Dime cual es tu edad: "));
+ double numeroEntradas = Double.parseDouble(IO.readln("Dime el total de entradas del que dispones: "));
+boolean aplicaPromocion = (edad<25)&&(numeroEntradas>=3);
+IO.println(aplicaPromocion);
+
+
+
+final double GRAVEDAD = 9.81;
+  IO.println("EXAMEN DE MANUEL GUTIÉRREZ NAVARRO.CÁLCULO DE ENRGÍA Y VELOCIDAD");
+double masaObjeto = Double.parseDouble(IO.readln("Dime la masa del objeto en kilogramos: "));
+double alturaCaida = Double.parseDouble(IO.readln("Dime la altura de la que cae  el objeto: "));
+double energiaPotencialGravitatoria = (masaObjeto*GRAVEDAD*alturaCaida);
+double pesoObjeto = (masaObjeto*GRAVEDAD);
+
+int pesoObject = (int) pesoObjeto;
+IO.println("La energía potencial gravitatoria es de: "+ energiaPotencialGravitatoria+ " joules");
+IO.println("El peso total del objeto es de un total de: "+pesoObject+ " Newtons");
+
+
+
+// Primero de todo en el código declaramos las variables necesarias en este programa
+  final int EDAD_MINIMA = 18;
+ // Declaramos la edad del usuario
+  int edadUsuario = 20;
+//Mediante un boolean verificamos si la edad del usuario es mayor de edad, es decir, mayor que 18 años
+  boolean esMayorDeEdad = (edadUsuario>=EDAD_MINIMA);
+//Finalmente imprimimos el resultado
+ IO.println(esMayorDeEdad);
+
+
+
+ //Pedimos por teclado dos numero enteros para los cálculos del programa
+ int numero1 = Integer.parseInt(IO.readln("Introduzca un número entero: "));
+int numero2 = Integer.parseInt(IO.readln("Introduzca otro número entero: "));
+//Declaramos unas variables para realizar los cálculos matemáticos 
+int suma = (numero1+numero2);
+double resto = (numero1%numero2);
+//Finalmente imprimimos los resultados
+IO.println("El resultado de la suma es: "+suma);
+IO.println("El resultado del resto es: "+resto);
+
+
+
+
+//Para empezar declaramos la constantes necesarias en el programa
+  final int MAXIMO_PERMITIDO = 100;
+//Pewdimos por teclado el número entero
+  int valorUsuario = Integer.parseInt(IO.readln("Introduzca un valor entero por teclado: "));
+//Aplicamos la condición con un boolean mediante comparadpres lógicos
+  boolean esValido = (valorUsuario>0)&&(valorUsuario<=MAXIMO_PERMITIDO);
+//Finalmente imprimimos el resultado final 
+IO.print("Finalmente,¿es el valorválido?: "+esValido);
+
+
+
+//Para empezar declaramos la constantes necesarias en el programa
+ final double IVA = 1.21;
+ //Pedimos por teclado los valores necesarios.
+ double precioBase = Double.parseDouble(IO.readln("Dime el valor de un precio base: "));
+//Realizanmos los calculos necesarios para calcular el precio total 
+ double precioTotal =(precioBase*IVA);
+//Hacemos una conversión tipo Cast para transformar el valor decimal a uno entero
+ int precioEntero = (int)precioTotal;
+//Finalmente imprimimos el resultado de ambos precio calculados anteriormente
+ IO.println("El precio total con decimales es un total de: "+precioTotal+" €");
+IO.println("El precio total entero sin decimales es un total de: "+precioEntero+ " €");
 }
+ 
+
+
+
 
 
 
