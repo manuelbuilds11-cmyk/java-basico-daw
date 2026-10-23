@@ -1,0 +1,76 @@
+void main() {
+//Definimos de forma exacta los puntos exactos del cuadrado
+Punto p1 = new Punto(0,0);
+Punto p2 = new Punto (20,0);
+Punto p3= new Punto (20,-20);
+Punto p4= new Punto(0,-20);
+
+//Creamos el lápiz
+Lapiz lapiz1 = new Lapiz();
+
+//Bajamos el lápiz para empezar a escribir 
+
+lapiz1.baja();
+
+//Movemos el lápiz por los puntos exactos mientras que esta bajado para dibujar la figura
+lapiz1.mueve(p2);;
+lapiz1.mueve(p3);
+lapiz1.mueve(p4);;
+lapiz1.mueve(p1);
+
+//Subimos el lápiz para finalizar la figura
+lapiz1.sube();
+
+
+//Creamos el otro lápiz y le asignamos el punto de inicio para la figura del triángulo
+Lapiz lapiz2 = new Lapiz();
+Punto pInicio2 = new Punto(20,35);
+
+//Subimos el lápiz
+lapiz2.sube();
+
+//Lo movemos al punto de inicio
+lapiz2.mueve(pInicio2);
+
+//Bajamos el lápiz para empezar a escribir
+lapiz2.baja();
+
+//Vamos desplazando el lápiz y girándolo para dibujar la figura
+lapiz2.desplaza(30);
+lapiz2.gira(120);
+lapiz2.desplaza(30);
+lapiz2.gira(120);
+lapiz2.desplaza(30);
+lapiz2.sube();
+
+
+//Creamos otr lápiz para el pentágono 
+Lapiz lapiz3= new Lapiz();
+
+//Asignamos el punto de inicio de la figura
+Punto pInicio3= new Punto(25,55);
+
+//Subimos el lápiz y lo movemos al punto de inicio que le hemos asignado 
+lapiz3.sube();
+lapiz3.mueve(pInicio3);
+
+//Bajamos el lápiz para empezar a escribir
+lapiz3.baja();
+
+//Vamos desplazando y girando la figura para dibujar la figura
+lapiz3.desplaza(20);
+lapiz3.gira(72);
+lapiz3.desplaza(20);
+lapiz3.gira(72);
+lapiz3.desplaza(20);
+lapiz3.gira(72);
+lapiz3.desplaza(20);
+lapiz3.gira(72);
+lapiz3.desplaza(20);
+lapiz3.gira(72);
+
+//Finalmente el lápiz sube al terminar de dibujar
+lapiz3.sube();
+
+//FIN DEL PROGRAMA
+}

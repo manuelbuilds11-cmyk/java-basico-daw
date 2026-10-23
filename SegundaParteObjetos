@@ -1,0 +1,27 @@
+void main() {
+  //Se piden por teclado los dos números reales y los dos números imaginarios
+  double parteReal1 = Double.parseDouble(IO.readln("Dime el valor del  número complejo: "));
+  double parteImaginaria1 = Double.parseDouble(IO.readln("Dime el valor del número imaginario: "));
+
+  double parteReal2 = Double.parseDouble(IO.readln("Dime el valor del  número complejo: "));
+  double parteImaginaria2 = Double.parseDouble(IO.readln("Dime el valor del número imaginario: "));
+
+  //Crear los objetos Complejo con esos valores.  
+Complejo complejo1 = new Complejo(parteReal1,parteImaginaria1);
+Complejo complejo2 = new Complejo(parteReal2,parteImaginaria2);
+
+//Se realizan los cálculos pedidos
+Complejo suma=complejo1.sumar(complejo2);
+Complejo resta=complejo1.restar(complejo2);
+Complejo multiplicar=complejo1.multiplicar(complejo2);
+Complejo dividir=complejo1.dividir(complejo2);
+
+//Se imprimen con el metodo to string
+IO.println(suma.toString());
+IO.println(resta.toString());
+IO.println(multiplicar.toString());
+IO.println(dividir.toString());
+
+
+
+}

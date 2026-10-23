@@ -1,0 +1,39 @@
+void main() {
+//Creamos una nueva cuenta
+ CuentaCorriente cuenta = new CuentaCorriente("11111");
+ 
+ //Ingresamos dinero, 1000 euros concretamente
+ cuenta.ingresar(1000);
+
+ // Imprimimos el saldo que tenemos en la cuenta 
+ IO.println(cuenta.getSaldo());
+
+ //Intentamos retirar mas dinero del que tenemos en la cuenta, por lo que nos sale un error en consola ya quye no tenemos dinero suficiente
+ cuenta.retirar(1100);
+ 
+ //Imprimimos el saldo de nuevo
+ IO.println(cuenta.getSaldo());
+
+ //Retiramos 900 euros, por lo que quedan 100 euros en la cuenta
+ cuenta.retirar(900);
+ 
+ //Imprimimos el saldo de nuevo
+ IO.println(cuenta.getSaldo());
+ 
+ //Retiramos 100 euros, esto hace que la cuenta este a 0 euros
+  cuenta.retirar(100);
+
+ //Ingresamos 350 euros
+  cuenta.ingresar(350);
+
+  //Imprimimos el saldo de nuevo
+  IO.println(cuenta.getSaldo());
+
+  //Retiramos 400 euros de la cuenta, no nos deja retirar los 400 euros ya que solo disponemos de 350 en la cuenta 
+  cuenta.retirar(400);
+        
+  //Imprimos el saldo
+  IO.println(cuenta.getSaldo());
+  
+  //Fin del programa
+}
