@@ -1,0 +1,85 @@
+void main() {
+
+//EJERCICIO 1: Gestión de Cuenta Bancaria (CuentaCorriente)
+  
+  //Creamos la nueva cuenta con su identificador
+  CuentaCorriente cuentaCorriente1 = new CuentaCorriente("ES999");
+//Ingresamos 500 euros en la cuenta
+  
+ cuentaCorriente1.ingresar(500);
+
+ //Imprimimos el saldo
+ IO.println(cuentaCorriente1.getSaldo());
+
+ //Intentamos retirar 700 e imprimir el saldo, cosa que da error ya que solo disponmeos de 500 euros
+ cuentaCorriente1.retirar(700);
+IO.println(cuentaCorriente1.getSaldo());
+
+//Procedemos a retirar 200 e ingresar 50 euros
+cuentaCorriente1.retirar(200);
+cuentaCorriente1.ingresar(50);
+
+//Por último imprimimos el número de cuenta y el saldo final de la cuenta
+IO.println("El número identificador de la cuenta es: "+cuentaCorriente1.getNumero());
+IO.println(cuentaCorriente1.getSaldo());
+
+//FIN DEL PROGRAMA
+
+//EJERCICIO 2: Operaciones con Números Complejos (Complejo)
+
+//Definimos el nñumero real y el número imaginario de cada número complejo
+
+double numeroReal = 4.0;
+double numeroImaginario=2.0;
+
+double numeroReal2 = 1.0;
+double numeroImaginario2 = 3.0;
+
+//Mediante los número de antes los reales e imaginarios creamos los dos números complejos
+Complejo numeroComplejo1 = new Complejo(numeroReal,numeroImaginario);
+Complejo numeroComplejo2 = new Complejo(numeroReal2,numeroImaginario2);
+
+//Definimos  variables de tipo complejo para facilitar la impresión de los cálculos
+Complejo suma =numeroComplejo1.sumar(numeroComplejo2);
+Complejo producto=numeroComplejo1.multiplicar(numeroComplejo2);
+
+//Imprimimos ambos resultados por pantala utilizando el  método String
+
+IO.println(suma.toString());
+
+IO.println(producto.toString());
+
+//FIN DEL PROGRAMA
+
+//EJERCICIO 3: Dibujo Geométrico (Lapiz y Punto)
+
+//Para empezar creamos un nuevo lápiz
+Lapiz lapiz1 = new Lapiz();
+
+//Subimos el lapiz por si acaso
+lapiz1.sube();
+//Asignamos el punto de inicio donde debe iniciar el dibujo de la figura geométrica
+Punto  puntoInicio= new Punto(10,10);
+
+//Movemos el lápiz hasta el punto de inicio
+lapiz1.mueve(puntoInicio);
+
+//Al saber las medidas ya que es un rectángulo calculamos las meidas de los otros tres ya que el cuarto ya lo tenemos por el punto de inicio
+Punto p1 = new Punto(50,10);
+Punto p2= new Punto(50,30);
+Punto p3 = new Punto(10,30);
+
+//Bajamos el lápiz para empezar a escribir
+lapiz1.baja();
+
+//Movemos el lápiz cuatro veces para dibujar la figura y terminamos en el punto de inicio para cerrarla
+lapiz1.mueve(p1);
+lapiz1.mueve(p2);
+lapiz1.mueve(p3);
+lapiz1.mueve(puntoInicio);
+
+//Subimos el lápiz y terminamos
+lapiz1.sube();
+
+//FIN DEL PROGRAMA
+}
