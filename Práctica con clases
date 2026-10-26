@@ -1,0 +1,74 @@
+  import es.iesbelen.programacion.unidad02.actividad2051.GranHermano;
+  import paquete1.Fraccion;
+
+  void main() {
+
+  //Definimos los cuatro GranHermano y le definimos la edad de cada uno 
+   
+   GranHermano GranHermano1= new GranHermano(45);
+
+   GranHermano GranHermano2 = new GranHermano(65);
+
+   GranHermano GranHermano3 = new GranHermano(67);
+
+   GranHermano GranHermano4 = new GranHermano(82);
+
+  //Imprimimos la edad de cada uno mediante getEdad
+
+   IO.println(GranHermano1.getEdad());
+
+   IO.println(GranHermano2.getEdad());
+
+   IO.println(GranHermano3.getEdad());
+
+   IO.println(GranHermano4.getEdad());
+
+  //Finalmente imprimos el numero de GranHermano creados
+
+      IO.println(GranHermano.getNumeroObjetosCreados());
+
+
+
+  //Definimos los numeradores y denominadores necesarios
+
+  int numerador1 = Integer.parseInt(IO.readln("Dime un número, que será el numerador: "));
+  int denominador1 = Integer.parseInt(IO.readln("Dime un número, que será el denominador, no puede ser 0: "));
+  int numerador2 = Integer.parseInt(IO.readln("Dime un número, que será el numerador: "));
+  int denominador2 = Integer.parseInt(IO.readln("Dime un número, que será el denominador, no puede ser 0: "));
+
+  //Creamos las dos fracciones mediante los numeradores y denominadores definidos anteriormente
+
+  paquete1.Fraccion f1 = new Fraccion(numerador1,denominador1);
+
+ paquete1.Fraccion f2 = new Fraccion(numerador2,denominador2);
+
+  //Realizamos los calculos pedidos y los imprimimos
+
+      paquete1.Fraccion suma =(f1.suma(f2));
+
+      paquete1.Fraccion resta=(f1.resta(f2));
+
+      paquete1.Fraccion producto=(f1.producto(f2));
+
+      paquete1.Fraccion division=(f1.division(f2));
+
+      //Imprimos los resultados
+      
+  IO.println("La suma de las dos fracciones anteriores es de: "+suma.getNumerador()+"/"+suma.getDenominador());
+  IO.println("La resta de las dos fracciones anteriores es de: "+resta.getNumerador()+"/"+resta.getDenominador());
+  IO.println("El producto de las dos fracciones anteriores es de: "+producto.getNumerador()+"/"+producto.getDenominador());
+  IO.println("La division  de las dos fracciones anteriores es de: "+division.getNumerador()+"/"+division.getDenominador());
+
+  //Simplificamos los resultados de el paquete 1 con .simplifica
+  paquete2.Fraccion sumaSimp =new paquete2.Fraccion (suma.getNumerador(),suma.getDenominador()).simplifica();
+  paquete2.Fraccion restaSimp =new paquete2.Fraccion (resta.getNumerador(),resta.getDenominador()).simplifica();
+  paquete2.Fraccion productoSimp =new paquete2.Fraccion (producto.getNumerador(),producto.getDenominador()).simplifica();
+  paquete2.Fraccion divisionSimp =new paquete2.Fraccion (division.getNumerador(),division.getDenominador()).simplifica();
+
+  //Finalmente obtenemos el numerador y denominador de el resultado simp
+  IO.println("La suma simplificada  es de: "+sumaSimp.getNum()+"/"+sumaSimp.getDen());
+  IO.println("La resta simplificada  es de: "+restaSimp.getNum()+"/"+restaSimp.getDen());
+  IO.println("El producto simplificado es de: "+productoSimp.getNum()+"/"+productoSimp.getDen());
+  IO.println("La división simplificada  es de: "+divisionSimp.getNum()+"/"+divisionSimp.getDen());
+
+}
