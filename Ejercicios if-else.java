@@ -189,6 +189,53 @@ IO.println(mensaje3);
 
 }
 
+//Ejercicio 17
+
+ IO.println("EsBisiestoApp");
+  
+ int año = Integer.parseInt(IO.readln("Dime el año que has elegido: "));
+ 
+ if(año%4==0&&año%100!=0||año%400==0) {
+   
+   IO.println("El año seleccionado es bisiesto");
+ 
+ }else {
+   
+   IO.println("El año seleccionado no es bisiesto");
+ }
+
+//Ejercicio 18
+
+ IO.println("ClimaPicnicApp");
+  
+double temperatura = Double.parseDouble(IO.readln("Dime cuanto es la temperatura actual: "));
+
+String lluvia= IO.readln("Esta lloviendo ahora mismo (s/n): ").toLowerCase();
+
+double velocidad = Double.parseDouble(IO.readln("Dime cual es la velocidad del viento actual: "));
+
+if(temperatura>=18&&(temperatura<=28)&&(lluvia.equals("n")&&(velocidad<=30)))
+
+IO.println("Hoy es un gran dia para ir de picnic");
+
+else {
+  
+  
+  IO.println("Hoy no hace un gran dia para ir de Picnic");
+
+
+
+}
+
+}
+
+
+
+
+
+
+
+
 
 
 
